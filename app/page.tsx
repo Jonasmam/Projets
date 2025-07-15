@@ -58,41 +58,45 @@ export default function InnovativePortfolio() {
     { name: "Node.js", level: 90, category: "Backend", icon: "🟢" },
     { name: "PHP/Symfony", level: 85, category: "Backend", icon: "🐘" },
     { name: "Python", level: 80, category: "Backend", icon: "🐍" },
+    { name: "Java/kotlin", level: 75, category: "Backend", icon: "☕" },
     { name: "MySQL/PostgreSQL", level: 90, category: "Database", icon: "🗄️" },
     { name: "MongoDB", level: 80, category: "Database", icon: "🍃" },
     { name: "Docker", level: 85, category: "DevOps", icon: "🐳" },
-    { name: "Azure/AWS", level: 80, category: "Cloud", icon: "☁️" },
-    { name: "OpenAI API", level: 85, category: "IA", icon: "🤖" },
+    { name: "Azure/AWS", level: 60, category: "Cloud", icon: "☁️" },
+    { name: "OpenAI API", level: 60, category: "IA", icon: "🤖" },
     { name: "Git/GitHub", level: 95, category: "Tools", icon: "📚" },
+    { name: "Figma", level: 80, category: "Design", icon: "🎨" },
+    { name: "Agile/Scrum", level: 90, category: "Methodology", icon: "🔄" }
+,
   ]
 
   const projects = [
     {
       id: 1,
-      title: "Plateforme E-commerce IA",
-      description: "Plateforme e-commerce avec recommandations IA et modules PrestaShop personnalisés",
-      image: "/placeholder.svg?height=300&width=400",
-      technologies: ["PrestaShop", "PHP", "OpenAI API", "MySQL", "JavaScript"],
+      title: "Plateforme E-commerce",
+      description: "Plateforme e-commerce avec recommandations et modules PrestaShop personnalisés, gestion de 200 000 produits.",
+      image: "./fget.png",
+      technologies: ["PrestaShop", "PHP", "MySQL", "JavaScript"],
       category: "fullstack",
       stats: { users: "10K+", performance: "99.9%", features: "50+" },
     },
     {
       id: 2,
-      title: "Dashboard ERP Intelligent",
-      description: "Interface de gestion ERP avec analytics en temps réel et intégration multi-systèmes",
-      image: "/placeholder.svg?height=300&width=400",
-      technologies: ["Vue.js", "Symfony", "PostgreSQL", "Docker", "Azure"],
-      category: "frontend",
-      stats: { modules: "25+", uptime: "99.8%", users: "500+" },
+      title: "API RESTful ERP - PrestaShop",
+      description: "Mise en place d’une API RESTful entre l’ERP et PrestaShop pour automatiser et optimiser la gestion des articles, clients et tarifs, garantissant une communication fluide et un gain de productivité au quotidien",
+      image: "/api.jpeg.webp",
+      technologies: ["Node.js","postman", "Express.js","JWT","Helmet.js", "PostgreSQL", "Docker","Web service prestashop" , "Divalto web service", "MySQL"],
+      category: "Backend",
+      stats: { uptime: "99.8%", users: "500+" },
     },
     {
       id: 3,
-      title: "API Microservices",
-      description: "Architecture microservices avec API RESTful sécurisées et documentation Swagger",
-      image: "/placeholder.svg?height=300&width=400",
-      technologies: ["Node.js", "Express", "MongoDB", "JWT", "Docker"],
-      category: "backend",
-      stats: { endpoints: "100+", requests: "1M+", latency: "<50ms" },
+      title: "Suivis de commandes clients",
+      description: "Développement d’un système de suivi de commandes en temps réel, connecté à l’ERP, permettant aux clients d’accéder facilement à l’état de leurs commandes.",
+      image: "/suivis.avif",
+      technologies: ["Symphony","PHP", "Cron", "MongoDB", "Docker", "Nginx / Apache","Twig"],
+      category: "Fullstack",
+      stats: { endpoints: "100+", users: "400", latency: "<50ms" },
     },
     {
       id: 4,
@@ -114,12 +118,15 @@ export default function InnovativePortfolio() {
       description:
         "Architecture et développement d'applications web performantes, gestion d'équipe technique, intégration IA",
       achievements: [
-        "Réduction de 40% du temps de développement",
-        "Mise en place de l'architecture microservices",
-        "Intégration réussie de l'IA dans 5 projets",
-        "Formation de 3 développeurs junior",
+        "Conception, développement et optimisation de sites web performants et évolutifs (Frontend & Backend).",
+        "Intégration d’API RESTful sécurisées pour connecter les systèmes.",
+        "Optimisation et gestion des bases de données MySQL, PostgreSQL et MongoDB.",
+        "Développement de modules sur mesure pour PrestaShop",
+        "Automatisation des processus métier pour améliorer la productivité",
+        "conception et developpement d'application logiciels"
+        
       ],
-      technologies: ["React", "Node.js", "PHP", "Azure", "OpenAI API"],
+      technologies: ["React", "Node.js", "PHP","Java", "Azure", "OpenAI API ", "prestashop"],
     },
     {
       title: "Stagiaire Technique & Développeur",
@@ -360,14 +367,14 @@ export default function InnovativePortfolio() {
               <Rocket className="w-5 h-5 mr-2" />
               Découvrir mes projets
             </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 bg-transparent"
+            <a
+              href="/CV-2025-JM-A.pdf"
+              download
+              className="inline-flex items-center justify-center border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 bg-transparent"
             >
               <Download className="w-5 h-5 mr-2" />
               Télécharger CV
-            </Button>
+            </a>
           </motion.div>
 
           <motion.div
@@ -377,9 +384,9 @@ export default function InnovativePortfolio() {
             className="mt-16 grid grid-cols-3 gap-8 max-w-2xl mx-auto"
           >
             {[
-              { number: "3+", label: "Années d'expérience" },
-              { number: "15+", label: "Projets réalisés" },
-              { number: "10+", label: "Technologies maîtrisées" },
+              { number: "5+", label: "Années d'expérience" },
+              { number: "13+", label: "Projets réalisés" },
+              { number: "7+", label: "Technologies maîtrisées" },
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -738,21 +745,7 @@ export default function InnovativePortfolio() {
                     </div>
 
                     <div className="flex gap-3">
-                      <Button
-                        size="sm"
-                        className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 flex-1"
-                      >
-                        <Github className="w-4 h-4 mr-2" />
-                        Code
-                      </Button>
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        className="border-indigo-500/30 text-indigo-400 hover:bg-indigo-500/20 flex-1 bg-transparent"
-                      >
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Demo
-                      </Button>
+                   
                     </div>
                   </CardContent>
                 </Card>
@@ -899,50 +892,69 @@ export default function InnovativePortfolio() {
                       <MapPin className="w-8 h-8 text-rose-400" />
                       <div className="text-center">
                         <div className="text-sm text-gray-400">Localisation</div>
-                        <div className="text-xl text-gray-300 font-medium">Villeurbanne, France</div>
+                        <div className="text-xl text-gray-300 font-medium">Lyon, France</div>
                       </div>
                     </motion.div>
                   </div>
 
                   <div className="text-center">
-                    <h4 className="text-xl font-semibold text-pink-400 mb-6">Retrouvez-moi sur</h4>
-                    <div className="flex justify-center gap-6">
-                      {[
-                        { icon: Github, color: "hover:text-purple-400", label: "GitHub" },
-                        { icon: Linkedin, color: "hover:text-blue-400", label: "LinkedIn" },
-                        { icon: Mail, color: "hover:text-pink-400", label: "Email" },
-                      ].map((social, index) => (
-                        <motion.button
-                          key={index}
-                          whileHover={{ scale: 1.1, y: -5 }}
-                          whileTap={{ scale: 0.9 }}
-                          className={`group flex flex-col items-center gap-2 p-4 rounded-xl bg-gradient-to-r from-pink-500/20 to-rose-500/20 border border-pink-500/30 text-gray-400 ${social.color} transition-all duration-300 hover:border-pink-400/60`}
-                        >
-                          <social.icon className="w-8 h-8" />
-                          <span className="text-sm font-medium">{social.label}</span>
-                        </motion.button>
-                      ))}
-                    </div>
-                  </div>
-
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.6 }}
-                    viewport={{ once: true }}
-                    className="mt-12 text-center"
-                  >
-                    <p className="text-gray-300 text-lg mb-6">
-                      Intéressé par mon profil ? N'hésitez pas à me contacter pour discuter de vos projets !
-                    </p>
-                    <Button
-                      size="lg"
-                      className="bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105"
-                    >
-                      <Mail className="w-5 h-5 mr-2" />
-                      Envoyer un email
-                    </Button>
-                  </motion.div>
+  <h4 className="text-xl font-semibold text-pink-400 mb-6">Retrouvez-moi sur</h4>
+  <div className="flex justify-center gap-6">
+    {[
+      { 
+        icon: Github, 
+        color: "hover:text-purple-400", 
+        label: "GitHub", 
+        href: "https://github.com/Jonasmam/Projets" 
+      },
+      { 
+        icon: Linkedin, 
+        color: "hover:text-blue-400", 
+        label: "LinkedIn", 
+        href: "https://www.linkedin.com/in/jonas-mamola-383b991b9/" 
+      },
+      { 
+        icon: Mail, 
+        color: "hover:text-pink-400", 
+        label: "Email", 
+        href: "mailto:jonaslev4@gmail.com" 
+      },
+    ].map((social, index) => (
+      <motion.a
+        key={index}
+        href={social.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        whileHover={{ scale: 1.1, y: -5 }}
+        whileTap={{ scale: 0.9 }}
+        className={`group flex flex-col items-center gap-2 p-4 rounded-xl bg-gradient-to-r from-pink-500/20 to-rose-500/20 border border-pink-500/30 text-gray-400 ${social.color} transition-all duration-300 hover:border-pink-400/60`}
+      >
+        <social.icon className="w-8 h-8" />
+        <span className="text-sm font-medium">{social.label}</span>
+      </motion.a>
+    ))}
+  </div>
+</div>
+             <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.6 }}
+  viewport={{ once: true }}
+  className="mt-12 text-center"
+>
+  <p className="text-gray-300 text-lg mb-6">
+    Intéressé par mon profil ? N'hésitez pas à me contacter pour discuter de vos projets !
+  </p>
+  <motion.a
+    href="mailto:jonaslev4@gmail.com"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="inline-flex items-center justify-center bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white px-8 py-4 text-lg rounded-full transition-all duration-300"
+  >
+    <Mail className="w-5 h-5 mr-2" />
+    Envoyer un email
+  </motion.a>
+</motion.div>
                 </CardContent>
               </Card>
             </motion.div>
@@ -961,7 +973,7 @@ export default function InnovativePortfolio() {
           >
             <p className="text-gray-400 mb-2">&copy; 2024 Jonas Mamola. Tous droits réservés.</p>
             <p className="text-sm text-gray-500">
-              Développé avec ❤️ et{" "}
+              Développé avec{" "}
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Next.js
               </span>
