@@ -134,7 +134,7 @@ export default function InnovativePortfolio() {
       period: "2022 - Aujourd'hui",
       type: "Alternance",
       description:
-        "Architecture et développement d'applications web performantes, gestion d'équipe technique, intégration IA",
+        "Architecture et développement d'applications web performantes, intégration IA",
       achievements: [
         "Conception, développement et optimisation de sites web performants et évolutifs (Frontend & Backend).",
         "Intégration d’API RESTful sécurisées pour connecter les systèmes.",
